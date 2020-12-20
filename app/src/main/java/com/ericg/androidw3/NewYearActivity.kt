@@ -40,10 +40,6 @@ class NewYearActivity : AppCompatActivity() {
         }
         dialogBuilder.create().show()
 
-        dialogBinding?.btnNo?.setOnClickListener {
-            Toast.makeText(this, "cancelled", Toast.LENGTH_SHORT).show()
-            dialogBuilder.create().dismiss()
-        }
         dialogBinding?.btnYes?.setOnClickListener {
             finish()
         }
@@ -51,7 +47,6 @@ class NewYearActivity : AppCompatActivity() {
 
    /* uncomment if you want this feature*/
     /** confirm before exiting the app*/
-    /*
 
     var confirm: Boolean = true
 
@@ -65,7 +60,7 @@ class NewYearActivity : AppCompatActivity() {
                 confirm = true
             }, 2000)
         } else super.onBackPressed()
-    } */
+    }
 
     override fun onDestroy() {
         super.onDestroy()
